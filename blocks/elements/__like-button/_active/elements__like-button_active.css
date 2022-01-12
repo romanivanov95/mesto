@@ -1,17 +1,16 @@
-.elements__like-button {
+.elements__like-button_active {
     grid-area: like;
     margin: 30px 20px 30px auto;
-    background-image: url(../../../images/like-button.svg);
+    background-image: url(../../../../images/like-button-active.svg);
     width: 22px;
     height: 19px;
     border: none;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
-    padding: 0;    
+    padding: 0;   
 }
 
 .elements__like-button:hover {
-    opacity: 50%;
     cursor: pointer;
 }

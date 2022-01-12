@@ -12,6 +12,8 @@
         margin: 14px auto 36px auto;
         align-self: center;
         justify-self: center;
+        text-align: center;
+        max-width: calc(100vw - 38px);
         font-size: 14px;
         line-height: 17px;
     }

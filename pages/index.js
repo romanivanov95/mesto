@@ -6,6 +6,8 @@ let nameInput = document.querySelector('.popup__input-name');
 let jobInput = document.querySelector('.popup__input-job');
 let profileUserName = document.querySelector('.profile__name');
 let profileUserDescription = document.querySelector('.profile__description');
+let likeButton = document.querySelector('.elements__like-button');
+let likeButtonActive = document.querySelector('.elements__like-button_active');
 
 openPopup.addEventListener('click', function() {
     popup.classList.add('popup_opened');
@@ -14,6 +16,12 @@ openPopup.addEventListener('click', function() {
 closePopup.addEventListener('click', function () {
     popup.classList.remove('popup_opened');
 })
+
+likeButton.addEventListener('click', function() {
+    likeButton.classList.add('elements__like-button_active');
+})
+
+
 
 
 let formElement = document.querySelector('.popup');
