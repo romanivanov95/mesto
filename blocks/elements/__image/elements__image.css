@@ -1,0 +1,5 @@
+.elements__image {
+    grid-area: image;
+    height: 282px;
+    width: 282px;
+}

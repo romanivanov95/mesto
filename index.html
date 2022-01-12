@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+</head>
+<body class="page">
+  <header class="header">
+    <a href="#"><img src="./images/mesto_logo.svg" alt="Место_лого" class="header__logo"></a>
+  </header>
+<main class="content">
+  <section class="profile">
+    <img src="./images/kusto.png" alt="Аватар" class="profile__avatar">
+    <div class="profile__info">
+      <h1 class="profile__name">Жак-Ив Кусто</h1>
+      <h2 class="profile__description">Исследователь океана</h2>
+      <button class="profile__edit-button"></button>
+    </div>
+    <button class="profile__add-button"></button>
+  </section>
+  <section class="elements">
+    <div class="elements__card">
+      <img src="./images/karachaevsk.png" alt="Карачаевск" class="elements__image">
+      <h3 class="elements__name">Карачаевск</h3>
+      <button class="elements__like-button"></button>
+    </div>
+    <div class="elements__card">
+      <img src="./images/elbrus.png" alt="Эльбрус" class="elements__image">
+      <h3 class="elements__name">Гора Эльбрус</h3>
+      <button class="elements__like-button"></button>
+    </div>
+    <div class="elements__card">
+      <img src="./images/dombay.png" alt="Домбай" class="elements__image">
+      <h3 class="elements__name">Домбай</h3>
+      <button class="elements__like-button"></button>
+    </div>
+    <div class="elements__card">
+      <img src="./images/bornitskiy.png" alt="Борницкий карьер" class="elements__image">
+      <h3 class="elements__name">Борницкий Карьер</h3>
+      <button class="elements__like-button"></button>
+    </div>
+    <div class="elements__card">
+      <img src="./images/waterfall.png" alt="Саблино" class="elements__image">
+      <h3 class="elements__name">Саблино</h3>
+      <button class="elements__like-button"></button>
+    </div>
+    <div class="elements__card">
+      <img src="./images/ruskeala.png" alt="Рускеала" class="elements__image">
+      <h3 class="elements__name">Рускеала</h3>
+      <button class="elements__like-button"></button>
+    </div>
+  </section>
+  <div class="popup">
+    <form class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <input type="text" value="Жак-Ив Кусто" class="popup__input-name">
+      <input type="text" value="Исследователь океана" class="popup__input-job">
+      <button class="popup__save-button">Сохранить</button>
+      <button class="popup__close-button"></button>
+    </form>
+  </div>
+</main>
+<footer class="footer">
+  <p class="footer__text">&copy; 2022 Mesto Russia</p>
+</footer>
+<script src="./pages/index.js"></script>
+</body>
+</html>
