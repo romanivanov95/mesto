@@ -11,7 +11,7 @@
 - Работа с Figma.
 
 >#### _GitHubPages_
-[Ссылка на GitHub Pages] (https://romanivanov95.github.io/russian-travel/)
+[Ссылка на GitHub Pages] (https://romanivanov95.github.io/mesto/)
 
 >#### _Планы по доработке_
 Вроде все красиво, а дорабатывать еще достаточно - вот ближайшие планы:
