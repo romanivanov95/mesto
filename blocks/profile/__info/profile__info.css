@@ -1,5 +1,4 @@
 .profile__info {
-    height: 100%;
     display: grid;
     grid-template-areas:
     "name button"
