@@ -7,8 +7,8 @@ let profileUserDescription = document.querySelector('.profile__description');
 /*let likeButton = document.querySelector('.elements__like-button');
 let likeButtonActive = document.querySelector('.elements__like-button_active');
 let saveForm = document.querySelector('.popup__save-button');*/
-let nameInput = document.querySelector('.popup_input-value_name');
-let jobInput = document.querySelector('.popup_input-value_job');
+let nameInput = document.querySelector('.popup__input_value_name');
+let jobInput = document.querySelector('.popup__input_value_job');
 
 function popupAdd() {
     popup.classList.add('popup_opened');
