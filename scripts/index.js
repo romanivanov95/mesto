@@ -6,7 +6,7 @@ const profileUserDescription = document.querySelector('.profile__description');
 
 //переменные попапа edit-profile
 const popupEditUserButtonOpen = document.querySelector('.profile__edit-button');
-const popupEditUser = document.querySelector('.popup__value_edit-profile');
+const popupEditUser = document.querySelector('.popup_value_edit-profile');
 const popupEditUserForm = document.querySelector('.popup__form');
 const popupEditUserInputName = document.querySelector('.popup__input_value_name');
 const popupEditUserInputJob = document.querySelector('.popup__input_value_job');
@@ -14,14 +14,14 @@ const popupEditUserButtonClose = popupEditUser.querySelector('.popup__close-butt
 
 //переменные попапа add-element
 const popupAddElementButtonOpen = document.querySelector('.profile__add-button');
-const popupAddElement = document.querySelector('.popup__value_add-element');
+const popupAddElement = document.querySelector('.popup_value_add-element');
 const popupAddElementButtonClose = popupAddElement.querySelector('.popup__close-button');
 const popupAddElementForm = popupAddElement.querySelector('.popup__form');
 const popupAddElementInputName = popupAddElement.querySelector('.popup__input_value_element-name');
 const popupAddElementInputLink = popupAddElement.querySelector('.popup__input_value_element-link');
 
 //переменные попапа image-fullsize
-const popupImageFullsize = document.querySelector('.popup__value_image-fullsize');
+const popupImageFullsize = document.querySelector('.popup_value_image-fullsize');
 const popupImageFullsizeImage = popupImageFullsize.querySelector('.popup__fullsize-image');
 const popupImageFullsizeImageName = popupImageFullsize.querySelector('.popup__fullsize-image-name');
 const popupImageFullsizeButtonClose = popupImageFullsize.querySelector('.popup__close-button');
