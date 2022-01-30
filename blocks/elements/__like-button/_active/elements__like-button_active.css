@@ -3,6 +3,6 @@
 }
 
 .elements__like-button_active:hover {
-    opacity: none;
+    opacity: 1;
     cursor: pointer;
 }

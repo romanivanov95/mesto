@@ -10,6 +10,7 @@
     background-color: transparent;
     background-repeat: no-repeat;
     padding: 0;
+    transition: opacity 0.5s; 
 }
 
 .popup__close-button:hover {
