@@ -26,44 +26,47 @@ const popupImageFullsizeImage = popupImageFullsize.querySelector('.popup__fullsi
 const popupImageFullsizeImageName = popupImageFullsize.querySelector('.popup__fullsize-image-name');
 const popupImageFullsizeButtonClose = popupImageFullsize.querySelector('.popup__close-button');
 
-
-//функции открытия и закрытия попапа edit-profile
-function openPopupEditUser() {
-    popupEditUser.classList.add('popup_opened');
-    popupEditUserInputName.value = profileUserName.textContent;
-    popupEditUserInputJob.value = profileUserDescription.textContent;
+//общие функции открытия и закрытия попапов
+const openPopup = (element) => {
+    element.classList.add('popup_opened');
 }
-popupEditUserButtonOpen.addEventListener('click', openPopupEditUser);
 
-const removePopup = (element) => {
+const closePopup = (element) => {
     element.classList.remove('popup_opened');
 };
 
-popupEditUserButtonClose.addEventListener('click', () => {
-    removePopup (popupEditUser);
+//попап edit-profile
+popupEditUserButtonOpen.addEventListener('click', () => {
+    openPopup (popupEditUser);
+    popupEditUserInputName.value = profileUserName.textContent;
+    popupEditUserInputJob.value = profileUserDescription.textContent;
 });
 
-//функции открытия и закрытия попапа add-element
-function openPopupAddElement() {                             
-    popupAddElement.classList.add('popup_opened');
-}
-popupAddElementButtonOpen.addEventListener('click', openPopupAddElement);
-
-popupAddElementButtonClose.addEventListener('click', () => {
-    removePopup (popupAddElement);
+popupEditUserButtonClose.addEventListener('click', () => {
+    closePopup (popupEditUser);
 });
 
 //обработчик формы edit-profile
-const formSubmitHandler = event => {
+const handleEditProfileFormSubmit = event => {
   event.preventDefault();
   profileUserName.textContent = popupEditUserInputName.value;
   profileUserDescription.textContent = popupEditUserInputJob.value;
-  removePopup (popupEditUser);
+  closePopup (popupEditUser);
 };
-popupEditUserForm.addEventListener('submit', formSubmitHandler); 
+popupEditUserForm.addEventListener('submit', handleEditProfileFormSubmit); 
+
+//попап add-element
+popupAddElementButtonOpen.addEventListener('click', () => {
+    openPopup (popupAddElement);
+});
+
+popupAddElementButtonClose.addEventListener('click', () => {
+    popupAddElementForm.reset();
+    closePopup (popupAddElement);
+});
 
 //кнопка like
-const likeButtonActive = (element) => {
+const toggleLikeButton = (element) => {
     element.classList.toggle('elements__like-button_active');
 };
 
@@ -114,7 +117,7 @@ function addElement(name, link) {
   elementsName.textContent = name;
 
   elementsButtonLike.addEventListener('click', () => {
-    likeButtonActive(elementsButtonLike);
+    toggleLikeButton(elementsButtonLike);
   });
 
   elementsDeleteButton.addEventListener('click', () => {
@@ -125,40 +128,37 @@ function addElement(name, link) {
     popupImageFullsizeImage.src = link;
     popupImageFullsizeImage.alt = name;
     popupImageFullsizeImageName.textContent = name;
-    openPopupImageFullsize(popupImageFullsize);
+    openPopup (popupImageFullsize);
   });
 
   return elementsCard;
 };
 
-function extendElement (elementsAll, elementsCard) {
+function prependElement (elementsAll, elementsCard) {
   elementsAll.prepend(addElement (elementsCard.name, elementsCard.link));
 };
 
 //обработчик формы add-element
-const formSubmitAddElement = event => {
+const handleAddElementFormSubmit = event => {
   event.preventDefault();
   const elementsCard = {
     name: popupAddElementInputName.value,
     link: popupAddElementInputLink.value
   };
-  extendElement(elementsContainer, elementsCard);
-  removePopup (popupAddElement);
+  prependElement(elementsContainer, elementsCard);
+  popupAddElementForm.reset();
+  closePopup (popupAddElement);
 };
 
-popupAddElementForm.addEventListener('submit', formSubmitAddElement);
+popupAddElementForm.addEventListener('submit', handleAddElementFormSubmit);
 
 //добавление исходных карточек
 initialCards.forEach(function(elementsCard) {
-  extendElement(elementsContainer, elementsCard);
+  prependElement(elementsContainer, elementsCard);
 });
 
 //попап image-fullsize
-function openPopupImageFullsize() {                             
-  popupImageFullsize.classList.add('popup_opened');
-};
-
 popupImageFullsizeButtonClose.addEventListener('click', () => {
-  removePopup (popupImageFullsize);
+  closePopup (popupImageFullsize);
 });
 
