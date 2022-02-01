@@ -83,20 +83,20 @@ const initialCards = [
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
     },
     {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+      name: 'Саблино',
+      link: 'https://i.ibb.co/QKfvbHZ/waterfall.jpg'
     },
     {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+      name: 'Рускеала',
+      link: 'https://i.ibb.co/5WBxVDr/ruskeala.jpg'
     },
     {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+      name: 'Борницкий карьер',
+      link: 'https://i.ibb.co/RNgQ54D/bornitskiy.jpg'
     },
     {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+      name: 'Тосно',
+      link: 'https://i.ibb.co/k8T7D14/Processed-with-VSCO-with-c1-preset.jpg'
     },
     {
       name: 'Байкал',
