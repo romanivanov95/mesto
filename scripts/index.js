@@ -3,6 +3,7 @@ const page = document.querySelector('.page');
 const elementsContainer = document.querySelector('.elements');
 const profileUserName = document.querySelector('.profile__name');
 const profileUserDescription = document.querySelector('.profile__description');
+//const popup = document.querySelector('.popup');
 
 //переменные попапа edit-profile
 const popupEditUserButtonOpen = document.querySelector('.profile__edit-button');
@@ -29,10 +30,30 @@ const popupImageFullsizeButtonClose = popupImageFullsize.querySelector('.popup__
 //общие функции открытия и закрытия попапов
 const openPopup = (element) => {
     element.classList.add('popup_opened');
+    page.addEventListener('keydown', handlerEscKey);
+    page.addEventListener('click', handlerBackgroundCLose);
 }
 
 const closePopup = (element) => {
     element.classList.remove('popup_opened');
+    page.removeEventListener('keydown', handlerEscKey);
+    page.addEventListener('click', handlerBackgroundCLose);
+};
+
+//закрытие на esc
+function handlerEscKey(evt) {
+  if (evt.key === "Escape") {
+    const popup = document.querySelector('.popup_opened');
+    closePopup (popup);
+  };
+};
+
+//закрытие по нажатию на background
+function handlerBackgroundCLose(evt) {
+  if (evt.target.classList.contains('popup')) {
+    const popup = document.querySelector('.popup_opened');
+    closePopup (popup);
+  };
 };
 
 //попап edit-profile
@@ -161,4 +182,3 @@ initialCards.forEach(function(elementsCard) {
 popupImageFullsizeButtonClose.addEventListener('click', () => {
   closePopup (popupImageFullsize);
 });
-

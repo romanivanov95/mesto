@@ -22,35 +22,6 @@
     </section>
     <section class="elements">
     </section>
-    <div class="popup popup_value_edit-profile">
-      <div class="popup__container">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form name="popup_user-info" class="popup__form">
-          <input type="text" value="" name="PopupUserName" class="popup__input popup__input_value_name">
-          <input type="text" value="" name="PopupUserJob" class="popup__input popup__input_value_job">
-          <button class="popup__save-button" type="submit">Сохранить</button>
-        </form>
-        <button class="popup__close-button" type="button"></button>
-      </div>
-    </div>
-    <div class="popup popup_value_add-element">
-      <div class="popup__container">
-        <h2 class="popup__title">Новое место</h2>
-        <form name="popup_new-element" class="popup__form">
-          <input type="text" required value="" name="PopupElementName" class="popup__input popup__input_value_element-name" placeholder="Название">
-          <input type="text" required value="" name="PopupElementLink" class="popup__input popup__input_value_element-link" placeholder="Ссылка на картинку">
-          <button class="popup__save-button" type="submit">Сохранить</button>
-        </form>
-        <button class="popup__close-button" type="button"></button>
-      </div>
-    </div>
-    <div class="popup popup_value_image-fullsize">
-      <div class="popup__container-image-fullsize">
-        <img class="popup__fullsize-image" src=" " alt="">
-        <p class="popup__fullsize-image-name"></p>
-        <button class="popup__close-button" type="button"></button>
-      </div>
-    </div>
     <template id="elements">
       <div class="elements__card">
         <img src=" " alt="" class="elements__image">
@@ -63,6 +34,82 @@
   <footer class="footer">
     <p class="footer__text">&copy; 2022 Mesto Russia</p>
   </footer>
+  <div class="popup popup_value_edit-profile">
+    <div class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form name="popup_user-info" class="popup__form" novalidate>
+        <label class="popup__form-label">
+          <input 
+          type="text" 
+          value="" 
+          id="popup-user-name" 
+          name="popup__input_value_name"
+          class="popup__input popup__input_value_name"
+          placeholder="Имя"
+          required 
+          minlength="2" 
+          maxlength="40">
+          <span class="popup__input-error popup-user-name-error"></span>
+        </label>
+        <label class="popup__form-label">
+          <input 
+          type="text" 
+          value="" 
+          id="popup-user-job"
+          name="popup__input_value_job"
+          class="popup__input popup__input_value_job" 
+          placeholder="О себе"
+          required 
+          minlength="2" 
+          maxlength="200">
+          <span class="popup__input-error popup-user-job-error"></span>
+        </label>
+        <button class="popup__save-button" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__close-button" type="button"></button>
+    </div>
+  </div>
+  <div class="popup popup_value_add-element">
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
+      <form name="popup_new-element" class="popup__form" novalidate>
+        <label class="popup__form-label">
+          <input 
+          type="text" 
+          id="popup-new-element-name"
+          required 
+          value="" 
+          name="popup__input_value_element-name" 
+          class="popup__input popup__input_value_element-name" 
+          placeholder="Название"
+          minlength="2"
+          maxlength="30">
+          <span class="popup__input-error popup-new-element-name-error"></span>
+        </label>
+        <label class="popup__form-label">
+          <input 
+          type="url" 
+          id="popup-new-element-link"
+          required 
+          value="" 
+          name="popup__input_value_element-link" 
+          class="popup__input popup__input_value_element-link" 
+          placeholder="Ссылка на картинку">
+          <span class="popup__input-error popup-new-element-link-error"></span>
+        </label>
+        <button class="popup__save-button" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__close-button" type="button"></button>
+    </div>
+  </div>
+  <div class="popup popup_value_image-fullsize">
+    <div class="popup__container-image-fullsize">
+      <img class="popup__fullsize-image" src=" " alt="">
+      <p class="popup__fullsize-image-name"></p>
+      <button class="popup__close-button" type="button"></button>
+    </div>
+  </div>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
