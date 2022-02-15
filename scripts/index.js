@@ -20,6 +20,7 @@ const popupAddElementButtonClose = popupAddElement.querySelector('.popup__close-
 const popupAddElementForm = popupAddElement.querySelector('.popup__form');
 const popupAddElementInputName = popupAddElement.querySelector('.popup__input_value_element-name');
 const popupAddElementInputLink = popupAddElement.querySelector('.popup__input_value_element-link');
+const popupAddElementSaveButton = popupAddElement.querySelector('.popup__save-button');
 
 //переменные попапа image-fullsize
 const popupImageFullsize = document.querySelector('.popup_value_image-fullsize');
@@ -31,13 +32,13 @@ const popupImageFullsizeButtonClose = popupImageFullsize.querySelector('.popup__
 const openPopup = (element) => {
     element.classList.add('popup_opened');
     page.addEventListener('keydown', handlerEscKey);
-    page.addEventListener('click', handlerBackgroundCLose);
+    element.addEventListener('click', handlerBackgroundCLose);
 }
 
 const closePopup = (element) => {
     element.classList.remove('popup_opened');
     page.removeEventListener('keydown', handlerEscKey);
-    page.addEventListener('click', handlerBackgroundCLose);
+    element.removeEventListener('click', handlerBackgroundCLose);
 };
 
 //закрытие на esc
@@ -51,8 +52,7 @@ function handlerEscKey(evt) {
 //закрытие по нажатию на background
 function handlerBackgroundCLose(evt) {
   if (evt.target.classList.contains('popup')) {
-    const popup = document.querySelector('.popup_opened');
-    closePopup (popup);
+    closePopup(evt.target);
   };
 };
 
@@ -166,6 +166,7 @@ const handleAddElementFormSubmit = event => {
     name: popupAddElementInputName.value,
     link: popupAddElementInputLink.value
   };
+  saveButtonDisable(popupAddElementSaveButton, obj);
   prependElement(elementsContainer, elementsCard);
   popupAddElementForm.reset();
   closePopup (popupAddElement);
