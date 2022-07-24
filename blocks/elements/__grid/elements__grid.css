@@ -1,0 +1,23 @@
+.elements__grid{
+  display: grid;
+  grid: 361px / 1fr 1fr 1fr;
+  gap: 20px 17px;
+  min-height: fit-content;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width:1024px) {
+  .elements__grid{
+    grid: 361px / 1fr 1fr;
+    gap: 20px 17px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .elements__grid{
+    grid: 361px / 1fr;
+    gap: 20px;
+  }
+}

@@ -76,7 +76,7 @@ const toggleButtonState = (inputList, buttonElement, obj) => {
     };
 };
 
-//функция активнйо кнопки
+//функция активной кнопки
 const saveButtonActive = (buttonElement, obj) => {
     buttonElement.classList.remove(obj.inactiveButtonClass);
     buttonElement.removeAttribute('disabled');

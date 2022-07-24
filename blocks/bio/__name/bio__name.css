@@ -1,0 +1,20 @@
+.bio__name{
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.14;
+  margin: 0 18px 0 0;
+  padding: 0;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width:768px) {
+  .bio__name {
+    font-size: 27px;
+    margin-left: 35px;
+    margin-right: 10px;
+    width: 189px;
+  }
+}

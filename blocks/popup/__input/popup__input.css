@@ -1,26 +1,14 @@
-.popup__input {
-    width: 100%;
-    margin: 0;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    padding: 0 0 10px;
-    /*значение padding-top уменьшено специально, для соответствия
-    макету по pixel perfect, т.к в Figme размер между текстом
-    считается от линии текста, не от края самого длинного символа
-    как в html и css*/
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+.popup__input{
+  box-sizing: border-box;
+  color: #000;
+  max-width: 358px;
+  width: 100%;
+  height: 27px;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
-
-.popup__input:last-of-type {
-    margin: 0;
-}
-
-.popup__input:focus {
-    outline-color: rgb(113, 140, 221);
-}
-
-

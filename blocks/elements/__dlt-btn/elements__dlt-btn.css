@@ -1,0 +1,19 @@
+.elements__dlt-btn{
+  position: absolute;
+  background-image: url(../../../images/delete.svg);
+  background-color: transparent;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 19px;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.elements__dlt-btn:hover {
+  opacity: 0.6;
+}

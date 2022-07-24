@@ -1,0 +1,7 @@
+.popup__wrapper{
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}

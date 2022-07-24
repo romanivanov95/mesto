@@ -1,0 +1,26 @@
+.bio__edit-btn{
+  background-image: url(../../../images/Edit_btn.svg);
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  border: none;
+  cursor: pointer;
+  margin: 15px 0 0;
+  padding: 0;
+}
+
+@media screen and (max-width:768px) {
+  .bio__edit-btn{
+    background-image: url(../../../images/Edit_sml_btn.svg);
+    height: 18px;
+    width: 18px;
+    margin: 7px 0 0;
+  }
+}
+
+.bio__edit-btn:hover {
+  opacity: 0.6;
+}
