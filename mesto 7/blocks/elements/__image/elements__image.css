@@ -1,0 +1,10 @@
+.elements__image {
+    grid-area: image;
+    height: 282px;
+    width: 282px;
+    object-fit: cover;
+}
+
+.elements__image:hover {
+    cursor: pointer;
+}

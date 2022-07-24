@@ -1,0 +1,26 @@
+.popup__reserve-btn{
+  display: block;
+  margin: 48px auto 0;
+  padding: 0;
+  max-width: 358px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.popup__reserve-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width:768px) {
+  .popup__reserve-btn{
+    height: 46px;
+    font-size: 14px;
+  }
+}

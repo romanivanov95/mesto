@@ -1,0 +1,11 @@
+.elements__item{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 361px;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,12 @@
+.elements__photo{
+  margin: 0;
+  padding: 0;
+  width: 282px;
+  height: 282px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.elements__photo:hover {
+  cursor: pointer;
+}

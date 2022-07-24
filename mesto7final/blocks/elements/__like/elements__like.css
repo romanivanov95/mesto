@@ -1,0 +1,9 @@
+.elements__like{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 40px;
+
+}

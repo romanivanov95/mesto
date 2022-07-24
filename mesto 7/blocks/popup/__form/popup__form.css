@@ -1,0 +1,26 @@
+.popup__form {
+    padding: 49px 36px 37px;
+    /*значение padding-top уменьшено специально, для соответствия
+    макету по pixel perfect, т.к в Figme размер между текстом
+    считается от линии текста, не от края самого длинного символа
+    как в html и css*/
+    display: grid;
+    grid-template-columns: 358px;
+    grid-template-rows: 27px, 27px, 50px;
+    row-gap: 30px;
+    /*flex-direction: column;*/
+    margin: 0;
+    z-index: 3;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__form {
+        grid-template-columns: 238px;
+        grid-template-rows: 27px, 27px, 46px;
+        padding: 70px 22px 25px;
+        /*значение padding-top уменьшено специально, для соответствия
+    макету по pixel perfect, т.к в Figme размер между текстом
+    считается от линии текста, не от края самого длинного символа
+    как в html и css*/
+    }
+}
