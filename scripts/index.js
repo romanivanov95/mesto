@@ -1,8 +1,8 @@
-import Card from './Card.js';
+import Card from './Сard.js';
 import FormValidator from './FormValidator.js';
 
 const profileBtn = document.querySelector(".bio__edit-btn");
-const addCardBtn = document.querySelector(".profile__add-btn");
+const profileAddCardBtn = document.querySelector(".profile__add-btn");
 
 const profilePopup = document.querySelector(".popup_profile");
 const profilePopupSaveBtn = profilePopup.querySelector('.popup__save-btn');
@@ -50,11 +50,9 @@ function closePopup(popup) {
 }
 
 //Закрытие попапа по клику на оверлей
-function onOverlayClick(event) {
+function closeOverlayClick(event) {
   if(event.target === event.currentTarget) {
-    closePopup(profilePopup);
-    closePopup(cardPopup);
-    closePopup(imagePopup);
+    closePopup(event.currentTarget);
   }
 }
 
@@ -79,7 +77,7 @@ function renderCard (link, name) {
 }
 
 function addCard (card) {
-  listContainer.append(card);
+  listContainer.prepend(card);
 }
 
 const initialCards = [
@@ -140,7 +138,7 @@ profileBtn.addEventListener('click', () => {
 profilePopupSaveBtn.addEventListener('submit', handleProfileFormSubmit);
 
 
-addCardBtn.addEventListener('click', () => {
+profileAddCardBtn.addEventListener('click', () => {
   formImgCard.reset(); 
   addCardFormValidator.clearErrors();
   openPopup(cardPopup);
@@ -148,9 +146,9 @@ addCardBtn.addEventListener('click', () => {
 cardPopup.addEventListener('submit',  handleSubmitPopupAddCard);
 
 
-profilePopup.addEventListener('click', onOverlayClick);
-cardPopup.addEventListener('click', onOverlayClick);
-imagePopup.addEventListener('click', onOverlayClick);
+profilePopup.addEventListener('click', closeOverlayClick);
+cardPopup.addEventListener('click', closeOverlayClick);
+imagePopup.addEventListener('click', closeOverlayClick);
 profileCloseBtn.addEventListener("click", () => closePopup(profilePopup));
 cardCloseBtn.addEventListener("click", () => closePopup(cardPopup));
 albumCloseBtn.addEventListener("click", () => closePopup(imagePopup));
