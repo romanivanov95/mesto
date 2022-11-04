@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+</head>
+<body class="main-container">
+  <div class="page">
+
+    <!-- Header -->
+
+    <header class="header">
+      <img class="header__logo" src="<%=require('./images/Mesto-logo.svg')%>" alt="Логотип">
+    </header>
+
+
+    <!--Main-->
+
+
+    <main class="content">
+      <section class="profile">
+          <img src="<%=require('./images/Avatar.jpg')%>" alt="Фото профиля" class="profile__avatar">
+          <div class="bio">
+            <h1 class="bio__name">Жак-Ив Кусто</h1>
+            <button type="button" class="bio__edit-btn"></button>
+            <p class="bio__description">Исследователь океана</p>
+          </div>
+          <button type="button" class="profile__add-btn"></button>
+      </section>
+
+      <section class="elements">
+        <ul class="elements__grid">
+          
+        </ul>
+      </section>
+    </main>
+
+
+    <!--Footer-->
+
+
+    <footer class="footer">
+      <p class="footer__author">&copy; 2022 Mesto Russia</p>
+    </footer>
+
+
+    <!--Pop-up-->
+
+
+    <div id='popupProfile' class="popup popup_profile">
+      <div class="popup__container">
+        <button class="popup__close-btn popup__close-btn_profile" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form popup__form_bio" name="edit-profile" novalidate>
+          <input class="popup__input popup__input_type_call" id="call-input" type="text" name="name" placeholder="Ваше имя" minlength="2" maxlength="40" required>
+          <span class="popup__input-error" id="call-input-error"></span>
+          <input class="popup__input popup__input_type_hobbies" id="hobbies-input" type="text" name="about" placeholder="О себе" minlength="2" maxlength="200" required>
+          <span class="popup__input-error" id="hobbies-input-error"></span>
+          <button class="popup__button popup__save-btn"  type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div id='popupCard' class="popup popup_card">
+      <div class="popup__container">
+        <button class="popup__close-btn popup__close-btn_card" type="button"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form popup__form_card" name="edit-place" novalidate>
+          <input class="popup__input popup__input_type_place" id="place-input" type="text" name="place" placeholder="Название" minlength="2" maxlength="30" required>
+          <span class="popup__input-error" id="place-input-error"></span>
+          <input class="popup__input popup__input_type_link" id="link-input" type="url" name="link" placeholder="Ссылка на картинку" required>
+          <span class="popup__input-error" id="link-input-error"></span>
+          <button class="popup__button popup__push-btn" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_album">
+      <div class="popup__wrapper">
+        <button class="popup__close-btn popup__close-btn_album" type="button"></button>
+        <img class="popup__image" src="#" alt="">
+        <p class="popup__description"></p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <template class="template" id="card__template">
+    <li class="elements__item">
+      <img src="#" alt="" class="elements__photo">
+      <h2 class="elements__name"></h2>
+      <button class="elements__like-btn" type="button"></button>
+      <button class="elements__dlt-btn"  type="button"></button>
+    </li>
+  </template>
+
+  
+</body>
+</html>

@@ -1,0 +1,15 @@
+.bio{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 336px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width:768px) {
+  .bio{
+    justify-content: center;
+    max-width: 282px;
+    margin: 0 0 36px 0;
+  }
+}
