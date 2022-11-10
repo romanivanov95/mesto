@@ -114,6 +114,9 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
               .then((data) => {
                   card.clickDelete(data)
               })
+              .catch((err) => {
+                console.log(err);
+              })
               .then(() => {
                   popupDelete.close()
               })
