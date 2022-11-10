@@ -1,3 +1,4 @@
+//Михаил, доброй ночи! Я же добавил catch(err) ко всем запросам
 import './index.css';
 import Api from '../components/Api.js';
 
@@ -67,6 +68,7 @@ function editAvatar(data) {
           userInfo.setUserInfo(data)
           popupAvatarForm.close();
       })
+      //Михаил, доброй ночи! Я же добавил catch(err) ко всем запросам
       .catch((err) => {
         console.log(err);
       })
