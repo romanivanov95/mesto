@@ -67,6 +67,9 @@ function editAvatar(data) {
           userInfo.setUserInfo(data)
           popupAvatarForm.close();
       })
+      .catch((err) => {
+        console.log(err);
+      })
       .finally(() => {
           popupAvatarForm.loadingConduction(false, 'Сохранить')
       })
@@ -114,6 +117,9 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
               .then(() => {
                   popupDelete.close()
               })
+              .catch((err) => {
+                console.log(err);
+              })
       })
   };
 
@@ -123,10 +129,16 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
               .then(cardData => {
                   card.setLikes(cardData.likes)
               })
+              .catch((err) => {
+                console.log(err);
+              })
       } else {
           api.putCardLike(card.id)
               .then(cardData => {
                   card.setLikes(cardData.likes)
+              })
+              .catch((err) => {
+                console.log(err);
               })
       }
   };
@@ -142,6 +154,9 @@ function editUserInfo(data) {
           userInfo.setUserInfo(data)
           popupFormEdit.close()
       })
+      .catch((err) => {
+        console.log(err);
+      })
       .finally(() => {
           popupFormEdit.loadingConduction(false, 'Сохранить')
       })
@@ -153,6 +168,9 @@ function saveCard(data) {
       .then(data => {
         initialItems.addItem(createNewCard(data))
           popupFormAdd.close()
+      })
+      .catch((err) => {
+        console.log(err);
       })
       .finally(() => {
           popupFormAdd.loadingConduction(false, 'Сохранить')
